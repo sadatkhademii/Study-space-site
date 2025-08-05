@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت مطالعه کنکور من - تم Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>داشبورد مطالعه کنکور ۱۴۰۵ - تم Space</h1>
+        <p>خوش آمدی، کاوشگر فضایی! روزهای مونده تا کنکور: <span id="daysToKonkor"></span></p>
+        <div id="calendar"></div> /* تقویم فانتزی */
+        <div id="clock"></div> /* ساعت آنلاین زنده */
+        <section id="registration">
+            <h2>ثبت روزانه درس</h2>
+            <select id="lesson">
+                <option>انتخاب درس</option>
+            </select>
+            <select id="subsection">
+                <option>انتخاب سرفصل</option>
+            </select>
+            <select id="activity">
+                <option>انتخاب فعالیت</option>
+                <option>تست زدم</option>
+                <option>خوندم</option>
+                <option>مرور کردم</option>
+                <option>فیلم دیدم</option>
+                <option>سوال تشریحی حل کردم</option>
+            </select>
+            <input type="number" id="testCount" placeholder="تعداد تست (اختیاری)">
+            <input type="number" id="testTime" placeholder="مدت زمان تست (دقیقه)">
+            <input type="number" id="studyHours" placeholder="ساعت مطالعه">
+            <input type="number" id="studyMinutes" placeholder="دقیقه مطالعه">
+            <input type="text" id="generalLesson" placeholder="درس عمومی (اختیاری)" style="display: none;">
+            <input type="text" id="generalSub" placeholder="مبحث عمومی (اختیاری)" style="display: none;">
+            <button onclick="saveData()">ثبت</button>
+        </section>
+        <section id="timer">
+            <h2>کرنومتر</h2>
+            <a href="https://www.online-stopwatch.com/space-theme-stopwatch/" target="_blank">رفتن به کرنومتر فضایی</a>
+        </section>
+        <section id="exam-registration">
+            <h2>ثبت آزمون‌ها</h2>
+            <select id="examLesson">
+                <option>انتخاب درس آزمون</option>
+            </select>
+            <input type="number" id="correct" placeholder="تعداد درست">
+            <input type="number" id="wrong" placeholder="تعداد غلط">
+            <input type="number" id="unanswered" placeholder="تعداد نزده">
+            <input type="number" id="examTime" placeholder="مدت زمان (دقیقه)">
+            <button onclick="saveExam()">ثبت آزمون</button>
+            <div id="examReport"></div>
+        </section>
+        <section id="ai-advisor">
+            <h2>مشاور AI</h2>
+            <button onclick="getAIAdvice()">دریافت نصیحت</button>
+            <div id="aiOutput"></div>
+        </section>
+        <section id="report">
+            <h2>گزارش روزانه</h2>
+            <button onclick="generateReport()">نمایش گزارش</button>
+            <div id="reportOutput"></div>
+        </section>
+        <section id="weekly-report">
+            <h2>گزارش هفتگی</h2>
+            <button onclick="generateWeeklyReport()">نمایش گزارش</button>
+            <div id="weeklyReportOutput"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
