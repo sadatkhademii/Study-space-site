@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(to bottom, #000, #001f3f); /* تم space با ستاره‌ها */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+    overflow: auto;
+    position: relative;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00bfff;
+    background: rgba(0, 0, 0, 0.5);
+}
+h1, h2 {
+    color: #00bfff; /* آبی فضایی */
+}
+button {
+    background-color: #00bfff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+button:hover {
+    background-color: #0080ff;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 5px #00bfff; }
+    to { box-shadow: 0 0 15px #00bfff; }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in;
+}
+th, td {
+    border: 1px solid #00bfff;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #001f3f;
+    color: #00bfff;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+input, select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+    background-color: #001f3f;
+    color: #fff;
+}
+input[type="number"] {
+    width: 150px;
+}
+#reportOutput, #weeklyReportOutput, #aiOutput, #examReport {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #001f3f;
+    border-radius: 5px;
+    text-align: right;
+}
+#calendar {
+    margin: 20px auto;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00bfff;
+    padding: 10px;
+    border-radius: 5px;
+}
+#clock {
+    font-size: 24px;
+    color: #00bfff;
+    margin: 10px;
+}
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12pt;
+    }
+    .container {
+        box-shadow: none;
+        border: none;
+    }
+    button {
+        display: none;
+    }
+}
